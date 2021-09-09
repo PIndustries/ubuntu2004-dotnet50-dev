@@ -14,6 +14,6 @@ RUN apt-get install -y dotnet-sdk-5.0
 RUN apt-get install -y gnupg
 RUN apt-get update
 RUN apt-get install -y mongodb
-RUN systemctl enable mongod
-RUN systemctl start mongod
-RUN systemctl status mongod
+RUN systemctl enable mongodb
+RUN systemctl start mongodb
+RUN systemctl status mongodb
