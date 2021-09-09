@@ -10,10 +10,9 @@ RUN dpkg -i packages-microsoft-prod.deb
 RUN rm packages-microsoft-prod.deb
 
 RUN apt-get update
+RUN apt-get install -y net-tools
 RUN apt-get install -y dotnet-sdk-5.0
 RUN apt-get install -y gnupg
 RUN apt-get update
 RUN apt-get install -y mongodb
-RUN systemctl enable mongodb
-RUN systemctl start mongodb
-RUN systemctl status mongodb
+RUN netstat -plnt
